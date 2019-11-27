@@ -16,6 +16,7 @@ char ** parse_args( char * line ){
 int main(int argc, char const *argv[]) {
   char command[100] = "ls -a -l";
   char ** ans = parse_args( command );
+  printf("Testing ls -a -l Command for Current Directory:\n");
   execvp(ans[0], ans);
   return 0;
 }
